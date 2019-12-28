@@ -1,0 +1,155 @@
+.nav {
+	display: block;
+	position: fixed;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 100%;
+	height: 60px !important;
+	box-shadow: none;
+	background-color: $cello;
+	overflow: hidden;
+	z-index: 10;
+	opacity: .9;
+	@extend %box-shadow2;
+}
+
+.sidebar-toggle {
+	position: absolute;
+	@include animate(all, .3s);
+	box-sizing: border-box;
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	top: 22px;
+	left: 15px;
+	height: 22px;
+	width: 22px;
+	z-index: 99;
+	.spinner {
+		position: absolute;
+	    box-sizing: border-box;
+	    height: 3px;
+	    width: 100%;
+	    @include animate(all, .3s);
+	    background-color: $white;
+	}
+	.horizontal {
+		position: relative;
+	    box-sizing: border-box;
+	    float: left;
+	    @include animate(all, .3s);
+	    margin-top: 3px;
+	}
+	.diagonal.part-1 {
+	    position: relative;
+	    box-sizing: border-box;
+	    float: left;
+	    @include animate(all, .3s);
+	}
+	.diagonal.part-2 {
+	    box-sizing: border-box;
+	    position: relative;
+	    float: left;
+	    @include animate(all, .3s);
+	    margin-top: 3px;
+	}
+}
+
+input[type=checkbox] {
+	&:checked {
+		~ .sidebar-toggle {
+			> .horizontal {
+				box-sizing: border-box;
+				@include animate(all, .3s);
+				opacity: 0;
+			}
+		}
+	}
+}
+
+input[type=checkbox] {
+	&:checked {
+		~ .sidebar-toggle {
+			> .diagonal.part-1 {
+				box-sizing: border-box;
+				margin-top: 8px;
+				@include animate(all, .3s);
+				@include transform( rotate(135deg) );
+			}
+		}
+	}
+}
+
+input[type=checkbox] {
+	&:checked {
+		~ .sidebar-toggle {
+			> .diagonal.part-2 {
+				box-sizing: border-box;
+				margin-top: -9px;
+				@include animate(all, .3s);
+				@include transform( rotate(-135deg) );
+			}
+		}
+	}
+}
+
+#sidebar-nav {
+	position: fixed;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    margin-top: 60px;
+    @include transform( translateX(-250px) );
+    @include animate(all, .25s);
+    /*background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);*/
+    background-color:$cello;
+    z-index: 2;
+    opacity: .9;
+    .sidebar-nav-menu {
+    	margin: 0;
+		padding: 0;
+		border-top: 1px solid $white2;
+    	li {
+			list-style: none;
+			color: $white;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 20px;
+			cursor: pointer;
+			border-bottom: 1px solid $white2;
+    		a {
+				color: $white;
+				text-transform: uppercase;
+				font-weight: bold;
+				cursor: pointer;
+				text-decoration: none;
+				@include animate(all, .25s);
+				&:hover {
+					color: $tomato;
+				}
+    		}
+    	}
+    	.form-inline {
+    		padding: 20px 0;
+    		.fa {
+    			padding-left: 1em;
+				color: $white;
+				cursor: pointer;
+    		}
+    	}
+    }
+}
+
+input[type="checkbox"] {
+	&:checked {
+		~ #sidebar-nav {
+			@include transform( translateX(0) );
+		}
+	}
+}
+
+input[type=checkbox] {
+	display: none;
+	box-sizing: border-box;
+	@include animate(all, .3s);
+}

@@ -1,0 +1,168 @@
+/*
+	=========================
+	MISSION TESTIMONIALS PART
+	=========================
+*/
+.mission-testimonials {
+	padding: 80px 0 40px 0;
+	h1 {
+		padding-bottom: 20px;
+	}
+}
+
+/*
+	=========================
+	SOLUTIONS PART
+	=========================
+*/
+.solutions {
+	padding: 40px 0;	
+	h1 {
+		padding-bottom: 20px;
+	}
+	.image-solutions {
+		display: block;
+		width: 100%;
+		height: 300px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom center;
+	}
+}
+
+.services-block {
+	@include animate(all, .3s);
+	padding-top: 1rem;
+	&:hover {
+		background-color: $tomato;
+		@include animate(all, .3s);
+		color: $white;
+	}
+	.inner {
+		height: 35px;
+		margin: 2px 10px;
+		padding: 2px 7px;
+		a {
+			color: $gray20;
+			@include animate(all, .3s);
+			text-transform: uppercase;
+			&:hover {
+				color: $white;
+				text-decoration: none;					
+			}
+		}
+	}
+}
+
+@media (max-width: $xs) {
+	.aside-1 { order: 1; }
+	.aside-2 { order: 2; }
+	.aside-3 { order: 3; }
+	.aside-4 { order: 4; }
+	.aside-5 { order: 6; }
+	.aside-6 { order: 5; }
+	.aside-7 { order: 8; }
+	.aside-8 { order: 7; }
+}
+
+@media (min-width: 576px) and (max-width: $sm) {
+	.aside-1 { order: 1; }
+	.aside-2 { order: 2; }
+	.aside-3 { order: 4; }
+	.aside-4 { order: 3; }
+	.aside-5 { order: 6; }
+	.aside-6 { order: 5; }
+	.aside-7 { order: 7; }
+	.aside-8 { order: 8; }
+}
+
+/*
+	=========================
+	INNOVATIVE DESIGN PART
+	=========================
+*/
+.design {
+	padding: 40px 0;	
+	h1 {
+		padding-bottom: 20px;
+	}
+	.design-image {
+		@include flexbox();
+		justify-content: flex-end;
+		padding-right: 0;
+		.image-st {
+			height: 300px;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: bottom center;
+		}
+	}
+}
+
+/*
+	=========================
+	CLIENTS PART
+	=========================
+*/
+.clients {
+	padding: 40px 0;
+	.clients-row {
+		@include flexbox();
+		@extend %align-items-center;
+		.clients-column {
+			@include flexbox(); 
+			@extend %align-items-center;
+			@extend %justify-content-center;
+			.nav-icon {
+				height: 48px;
+				width: 48px;
+			}
+		}
+		.image-box {
+			@include flexbox();
+			@extend %align-items-center;
+			@extend %justify-content-center;
+			height: 250px;
+			width: 125px;
+			background-size: cover;
+			background-position: center center;
+			.image-clients {
+				display: block;
+				width: 100%;
+				max-height: 73%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: bottom center;
+			}
+		}
+		.clients-column2 {
+			@include flexbox();
+			@extend %align-items-center;
+			@extend %justify-content-center;
+			.nav-icon {
+				height: 48px;
+				width: 48px;
+			}
+		}
+	}
+}
+
+/*
+	=========================
+	PRICING PART
+	=========================
+*/
+.pricing {
+	padding: 40px 0 80px 0;
+	h1 {
+		padding-bottom: 20px;
+	}
+	.pricing-deck {
+		margin: 40px 0;
+		.card {
+		@extend %box-shadow2;
+		}
+	}
+}
