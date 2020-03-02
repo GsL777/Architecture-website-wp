@@ -1,0 +1,25 @@
+/*
+	=========================
+		INDEX PART
+	=========================
+*/
+
+.content {
+	@include flexbox();
+	@extend %justify-content-center;
+	.entry-header{
+		@include flexbox();
+		@extend %justify-content-center;
+	}
+}
+.content-article {
+	padding: 10px 20px;
+}
+.element{
+	display: block;
+	width: 100%;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}

@@ -1,0 +1,109 @@
+/*
+    ===================================
+        FOOTER SECTION
+    ===================================
+*/
+.footer {
+	padding: 45px 0 35px 0;
+	font-size: 15px;
+	line-height: 24px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	@extend %box-shadow;
+	.social-icons {
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style: none;
+		li {
+			display: inline-block;
+			margin-bottom: 4px;
+			a {
+				display: inline-block;
+				text-align: center;
+				width: 44px;
+				height: 44px;
+				margin-right: 8px;
+				border-radius: 100%;
+				color: $aluminium;
+				background-color: $cello;
+				font-size: 16px;
+				line-height: 44px;
+				@include animate2(all, .2s);
+				&:hover {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+			.facebook {
+				&:hover {
+					background-color: $facebook-blue;
+				}
+			}
+			.twitter {
+				&:hover {
+					background-color: $twitter-light-blue;
+				}
+			}
+			.linkedin {
+				&:hover {
+					background-color: $linkedin;
+				}
+			}
+		}
+	}
+	.footer-links {
+		@include flexbox();
+		@extend %justify-content-center;
+		list-style: none;
+		padding: 30px 0;
+		margin: 0;
+		li {
+			display: block;
+			padding: 10px;
+			a {
+				color: $white;
+				font-weight: bold;
+				text-transform: uppercase;
+				@include animate(all, .3s);
+				&:hover,
+				&:active,
+				&:focus{
+					color: $tomato;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.copyright-text {
+		margin: 0;
+		color: $white;
+	}
+}
+
+@media (max-width: 575px) {
+	.footer-links {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		@include flexbox();
+		-webkit-flex-flow: row wrap;
+		justify-content: space-around;
+	}
+}
+
+@media (max-width:991px){
+	.footer [class^=col-]{
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width:767px){
+	.footer{
+		padding-bottom: 0;
+		.copyright-text,
+		.social-icons {
+			text-align: center;
+		}
+	}
+}

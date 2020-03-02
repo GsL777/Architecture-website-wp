@@ -1,0 +1,155 @@
+/*
+	====================
+		CONTACTS PART
+	====================
+*/
+.contacts {
+	padding: 70px 0 40px 0;
+	h1 {
+		padding-bottom: 20px;
+	}
+	.icon-design {
+		@include flexbox();
+		-webkit-flex-flow: row wrap;
+		justify-content: space-around;
+		i {
+			font-size: 30px;
+			margin: 20px;
+		}
+		p {
+			margin-left: 2em;
+			margin-right: 2em;
+		}
+	}
+}
+
+/*
+	====================
+		CONTACT FORM PART
+	====================
+*/
+.contact-form {
+	padding: 30px 0 60px 0;
+	@media (min-width: 575px) and (max-width:768px) {
+		padding: 0 0 80px 0;
+	}
+	h1 {
+		padding-bottom: 20px;
+	}
+	@media (min-width: 575px) {
+		h3 {
+			padding-bottom: 40px;
+		}		
+	}
+	.form-section {
+		padding: 0 10px 0 35px;
+		.label-style {
+			padding-bottom: 1rem;
+		}	
+		.form-control {
+			border-radius: 0;
+			border: 2px solid $cello;
+		}
+	}
+	.map-section {
+		@media screen and (max-width:768px) {
+			margin: 0 0 0 26px;/*margin-left: 26px;
+			margin-right: 9px;*/
+		}
+		iframe {
+			width: 100%;
+		}		
+	}
+}
+
+.contact-form {
+	.contact-button {
+		position: relative;
+		width: 170px;
+		height: 50px;
+		border: 2px solid $cello;
+		float: left;
+		text-align: center;
+		cursor: pointer;
+		box-sizing: border-box;
+		overflow: hidden;
+		margin: 20px 0 0 0;
+		a {
+			position: relative;
+			font-family: arial;
+			font-size: 16px;
+			color: $cello;
+			text-decoration: none;
+			line-height: 50px;
+			@include animate(all, .3s);
+			z-index: 2;
+		}
+		.contact-effect {
+			position: absolute;
+			width: 240px;
+			height: 50px;
+			left: -240px;
+			background: $cello;
+			@include animate(all, .3s);
+			z-index: 1;
+		}	
+		&:hover {
+			a {
+				color: $tomato;
+			}
+			.contact-effect {
+				left: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs){
+	iframe {
+		width: 100%;
+		height: 300px;
+		min-width: 280px;
+	}	
+}
+
+.form-row {
+	flex-direction: column;
+}
+
+@media (max-width: $sm) {
+	.input-style-left{
+		padding: 0 20px;
+	}
+	.input-style-right{
+		padding: 0 20px;
+	}
+}
+
+@media (min-width: 768px) {
+	.input-style-left {
+		padding: 0 20px 0 21px;
+	}
+	.input-style-right {
+		padding: 0 20px 0 21px;
+	}
+}
+
+/* Contact form js START */
+.form-row {
+	margin: 0;
+}
+.form-control-msg {
+	display: none;
+}
+.has-error {
+	.form-control-msg {
+		display: block;
+	}
+	.form-control {
+		border-color: #ff0000;
+	}
+}
+.js-show-feedback {
+	display: block;
+}
+/* Contact form js END */

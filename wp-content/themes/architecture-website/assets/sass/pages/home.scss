@@ -1,0 +1,296 @@
+/*
+	=========================
+		MISSION TESTIMONIALS PART
+	=========================
+*/
+.mission-testimonials {
+	padding: 80px 0 40px 0;
+	h1 {
+		padding-bottom: 20px;
+	}
+}
+
+/*
+	=========================
+		SOLUTIONS PART
+	=========================
+*/
+
+.no-solutions { /*class in page-home.php in solutions section*/
+	padding: 0 !important;
+}
+
+.solutions {
+	padding: 40px 0; /*class in page-home.php in solutions section and putted into single-solutions.php*/
+	h1 {
+		padding-bottom: 20px;
+	}
+	.image-solutions {
+		display: block;
+		width: 100%;
+		height: 300px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom center;
+	}
+}
+
+.services-block {
+	@include animate(all, .3s);
+	padding-top: 1rem;
+	&:hover {
+		background-color: $tomato;
+		@include animate(all, .3s);
+		color: $white;
+	}
+	.inner {
+		height: 35px;
+		margin: 2px 10px;
+		padding: 2px 7px;
+		a {
+			color: $gray20;
+			@include animate(all, .3s);
+			text-transform: uppercase;
+			&:hover {
+				color: $white;
+				text-decoration: none;					
+			}
+		}
+	}
+}
+
+
+@media (max-width: $xs) {
+	.aside-1 { 
+		order: 1; 
+		@include flexbox();
+		flex-direction: column-reverse;
+	}
+	.aside-2 { order: 2; }
+	.aside-3 { 
+		order: 3; 
+		@include flexbox();
+		flex-direction: column-reverse;
+	}
+	.aside-4 { order: 4; }
+}
+
+@media (min-width: 576px) and (max-width: $sm) {
+	.aside-1 { order: 1; }
+	.aside-2 { 
+		order: 3;
+		flex-direction: row-reverse;
+	}
+	.aside-3 { 
+		order: 2;
+		flex-direction: row-reverse;
+	}
+	.aside-4 { order: 4; }
+}
+
+@media (min-width: 576px){
+	.aside-1 { order: 1; }
+	.aside-2 { order: 3; }
+	.aside-3 { order: 2; }
+	.aside-4 { order: 4; }
+	.solutions-row {
+		display: flex;
+	}
+}
+
+/*
+	=========================
+		INNOVATIVE DESIGN PART
+	=========================
+*/
+.design {
+	padding: 40px 0;	
+	h1 {
+		padding-bottom: 20px;
+	}
+	.design-image {
+		@include flexbox();
+		justify-content: flex-end;
+		padding-right: 0;
+		padding-left: 0;
+		.image-st {
+			height: 300px;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: bottom center;
+		}
+	}
+}
+
+/*
+	=========================
+		CLIENTS PART
+	=========================
+*/
+
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+.infinite-slides {
+	background-color: $white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+	height: 100px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 960px;
+}
+
+.infinite-slides {
+	&::before {
+		background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+		background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	&::after {
+		background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+		background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+}
+
+.infinite-slides {
+	&::after {
+	  right: 0;
+	  top: 0;
+	  -webkit-transform: rotateZ(180deg);
+	          transform: rotateZ(180deg);
+	}	
+}
+
+.infinite-slides{
+	&::before {
+	  left: 0;
+	  top: 0;
+	}
+}
+
+.infinite-slides {
+	.clients-slides {
+		-webkit-animation: scroll 40s linear infinite;
+		      animation: scroll 40s linear infinite;
+		display: -webkit-box;
+		@include flexbox();
+		width: calc(250px * 14);
+	}	
+}
+
+.infinite-slides {
+	.slide {
+		  height: 100px;
+		  width: 250px;
+		.image-clients {
+			display: block;
+			height: 100px;
+			width: 200px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+	}	
+}
+
+/*
+.clients {
+	padding: 40px 0;
+	.clients-row {
+		@include flexbox();
+		@extend %align-items-center;
+		.clients-column {
+			@include flexbox(); 
+			@extend %align-items-center;
+			@extend %justify-content-center;
+			.nav-icon {
+				height: 48px;
+				width: 48px;
+			}
+		}
+		.image-box {
+			@include flexbox();
+			@extend %align-items-center;
+			@extend %justify-content-center;
+			height: 250px;
+			width: 125px;
+			background-size: cover;
+			background-position: center center;
+			.image-clients {
+				display: block;
+				width: 100%;
+				max-height: 73%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: bottom center;
+			}
+		}
+		.clients-column2 {
+			@include flexbox();
+			@extend %align-items-center;
+			@extend %justify-content-center;
+			.nav-icon {
+				height: 48px;
+				width: 48px;
+			}
+		}
+	}
+}
+*/
+
+/*
+	=========================
+		PRICING PART
+	=========================
+*/
+.pricing {
+	padding: 40px 0 80px 0;
+	h1 {
+		padding-bottom: 20px;
+	}
+	.pricing-deck {
+		margin: 40px 0;
+		.card {
+		@extend %box-shadow2;
+		}
+	}
+}
+
+.card-footer {
+	p {
+		font-size: 32px;
+		margin-top: 1rem;
+	}
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Architecture website</title>
+		<!-- Font-awesome -->
+		<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+		<!-- Bootstrap 4.1.1 CSS -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+		<!-- Custom CSS 5.1.0 -->
+		<link rel="stylesheet" href="assets/css/main.css">
+
+		<!-- jQuery first -->
+		<script src="assets/js/jquery.min.js"></script>
+</head>
+
+	<body>
+
+
+		<div class="nav"></div>
+		<input type="checkbox" class="sidebar-menu-open" id="sidebar-menu-open">
+
+		<label for="sidebar-menu-open" class="sidebar-toggle">
+			<div class="spinner diagonal part-1"></div>
+			<div class="spinner horizontal"></div>
+			<div class="spinner diagonal part-2"></div>
+		</label>
+
+		<div id="sidebar-nav">
+			<ul class="sidebar-nav-menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="contact.html">Contact</a></li>
+
+				<form class="form-inline md-form form-sm mt-0">
+					<input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</form>
+			</ul>
+		</div><!-- #sidebar-nav -->
+
+		<div id="contact" class="main center">
+			<header class="header-image">
+				<div id="header-carousel" class="carousel slide" data-ride="carousel">
+					<div class="header-content">
+						<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+						<h2>Dolor sit amet, consectetur.</h2>	
+					</div><!-- .header-content -->
+
+					<div class="carousel-inner carousel-img">
+					    <div class="carousel-item active">
+					    	<div class="header-images" style="background-image: url(assets/img/architectural-design-architecture-blue-build.jpg);"></div>
+					    </div><!-- .carousel-item -->
+					    <div class="carousel-item">
+					    	<div class="header-images" style="background-image: url(assets/img/close-up-of-architectural-detail.jpg);"></div>
+					    </div><!-- .carousel-item -->
+					    <div class="carousel-item">
+					    	<div class="header-images" style="background-image: url(assets/img/white-concrete-building-beside-body-of-water.jpg);"></div>
+					    </div><!-- .carousel-item -->
+					</div><!-- .carousel-inner -->
+
+					<ol class="carousel-indicators">
+						<li class="circles" data-target="#header-carousel" data-slide-to="0" class="active"></li>
+						<li class="circles" data-target="#header-carousel" data-slide-to="1"></li>
+						<li class="circles" data-target="#header-carousel" data-slide-to="2"></li>
+					</ol>
+				</div><!-- #header-carousel -->
+			</header>
+
+			<section class="contacts">
+				<h1 class="text-center"><b>Contacts</b></h1>
+
+				<div class="row icon-design">
+					<!-- <div class="col-md-12 d-flex"> -->
+						<div class="text-center col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<i class="text-center fa fa-home"></i>
+							<p><b>Address</b></p>
+							<p>Maironis st. 4-10, Kaunas 44334,</p>
+							<p>Lithuania</p>
+						</div><!-- .col-md-4 -->
+
+						<div class="text-center col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<i class="text-center fa fa-envelope"></i>
+							<p><b>Email</b></p>
+							<p>email@email.com</p>
+							<p>email@email.com</p>
+						</div><!-- .col-md-4 -->
+
+						<div class="text-center col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<i class="text-center fa fa-phone"></i>
+							<p><b>Phone</b></p>
+							<p>123456789</p>
+							<p>123456789</p>
+						</div><!-- .col-md-4 -->
+					<!--</div> .col-md-12 -->
+				</div><!-- .row -->
+
+			</section>
+
+
+			<section class="contact-form">
+				<h1 class="text-center"><b>Interested in our services?</b></h1>
+
+				<h3 class="text-center">Write us</h3>
+
+				<div class="col-md-12 row">
+					<div class="col-lg-6 col-md-6 col-sm-12 form-section">
+						<form class="container">
+							<div class="row">
+								<div class="col-sm-12 form-group">
+									<div class="form-group label-style">
+										<label class="form-control-label" for="ownername">Enter your name</label>
+										<input class="form-control" id="Name" placeholder="Your Name" type="text">
+									</div><!-- .form-group -->
+
+									<div class="form-group">
+										<label class="form-control-label" for="owneremail">Email address</label>
+										<input aria-describedby="emailHelp" class="form-control" id="Email" placeholder="Enter email" type="email">
+									</div><!-- form-group -->
+							    </div>
+
+							    <div class="form-group col-md-12">
+									<label class="form-control-label" for="reasonforvisit" >Message</label>
+									<textarea class="form-control" id="Message" rows="3" placeholder="Enter message"></textarea>
+								</div><!-- form-group -->
+							</div><!-- .row -->
+
+							<div class="contact-button">
+								<div class="contact-effect"></div>
+								<a href="#">Send your message</a>
+							</div><!-- .contact-button -->
+
+
+						</form>
+					</div><!-- .form-section -->
+
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<section class="map-section">
+							<iframe src="http://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9177.697378462328!2d23.900596743388988!3d54.895473885323284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722730d4cbd67%3A0x708ad0174457ba3a!2sMaironio%20g.%204-10%2C%20Kaunas%2044334%2C%20Lithuania!5e0!3m2!1sen!2suk!4v1574543789123!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+						</section>
+					</div><!-- .col-lg-6 -->
+				</div><!-- .col-md-12 -->
+			</section>
+		</div><!-- #contact -->
+
+
+	<div id="cookie">
+		<div id="cookie-close">x</div>
+		This website is using cookies. <a href="#" target="_blank">More info</a>. <a class="cookie-agree">I agree</a>
+	</div><!-- #cookie -->
+
+
+		<footer class="footer" style="background-image: url(assets/img/house-beside-body-water.jpg);">
+			<div class="container">
+
+			    <div class="col-md-12 col-sm-12 col-xs-12">
+			        <ul class="text-center social-icons">
+			          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+			          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+			          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+			        </ul>
+			    </div><!-- .col-md-12 -->
+
+		        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<ul class="footer-links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</div><!-- .col-md-12 -->
+
+		        <div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+						<p class="text-center copyright-text">Copyright &copy; 2019 - (current year date)
+						</p>
+					</div><!-- .col-lg-12 -->
+		        </div><!-- .row -->
+			</div><!-- .container -->
+		</footer>
+
+
+	<!-- Bootstrap 4 -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- Custom JS -->
+	<script src="assets/js/main-jquery.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,118 @@
+/*
+	=========================
+		WHY CHOOSE US PART
+	=========================
+*/
+.choose-us {
+	padding: 80px 0 40px 0;
+	h1 {
+		padding-bottom: 20px;
+	}
+	.card {
+		@include animate(all, .3s);
+		@extend %box-shadow2;
+		&:hover {
+			/*background-color: $cello;
+			color: $tomato;
+			opacity: 0.9;*/
+		}
+		em {
+			@include flexbox();
+			flex-direction: column;
+			@extend %align-items-center;
+			padding-top: 25px;
+			font-size: 30px;
+		}
+	}
+}
+
+/*
+	=========================
+		OUR STORY PART
+	=========================
+*/
+.about-company {
+	padding: 40px 0;
+	h1 {
+		padding-bottom: 20px;
+	}
+	.company-img {
+		max-width: 100%;
+		height: 70vh;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left center;
+	}
+	.company-text {
+		padding-right: 45px;
+	}
+}
+
+@media (max-width: 575px){
+	.about-company {
+		.company-text {
+			padding: 0 30px;
+			h5 {
+				font-weight: 700;
+			}
+			.text-1{
+				padding-top: 1em;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px){
+	.about-company {
+		.company-text {
+			padding: 0 30px;
+			h5 {
+				font-weight: 700;
+			}
+			.text-1{
+				padding-top: 1em;
+			}
+		}
+	}
+}
+
+/*
+	=========================
+		WE ALSO DO PART
+	=========================
+*/
+.additional-services {
+	padding: 40px 0;
+	h1 {
+		padding-bottom: 20px;
+		padding-left: 15px;
+	}
+}
+
+/*
+	==============================
+		OUR TEAM PART
+	==============================
+*/
+.our-team {
+	padding: 40px 0 80px 0;
+	h1 {
+		padding-bottom: 20px;
+	}
+	.team {
+		.team-img {
+			@extend %box-shadow2;
+			&:hover {
+				opacity: 1;
+			}
+			@include animate(all, .3s);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			max-width: 100%;
+			height: 40vh;
+			opacity: .4;
+		}
+	}
+}
