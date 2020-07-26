@@ -1,4 +1,3 @@
-
 	<div class="col-md-8">
 		<?php 
 			if( has_post_thumbnail() ):

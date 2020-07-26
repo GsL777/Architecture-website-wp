@@ -1,4 +1,3 @@
-
 <div class="card">
 	<em class="fa fa-user"><!-- <img class="card-img-top" src="..." alt=""> --></em>
 	<div class="card-body">

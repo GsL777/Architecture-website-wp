@@ -39,7 +39,6 @@
 				</div><!-- row -->
 			</div><!-- image gallery -->
 		</section>
-
 	</div><!-- #projects -->
 
 

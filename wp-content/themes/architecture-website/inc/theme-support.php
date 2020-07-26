@@ -227,4 +227,54 @@ function mobileDetectGlobal(){//CALL THE FUNCTION IN ALL THE CONTENT as example 
 add_action('after_setup_theme', 'mobileDetectGlobal');//after_setup_theme - WordPress built in action 
 /* Initialize global Mobile Detect END */
 
-?>
+/*
+	===============================
+		SOCIAL SHARE BUTTONS START
+	===============================
+*/
+
+function social_btn(){
+	// $title = get_the_title();
+	// $permalink = get_permalink();
+
+	//Compose the share links for Facebook, Twitter, LinkedIn, Instagram
+	$facebook = sprintf('https://www.facebook.com/login/');
+	// $facebook = 'https://www.facebook.com/sharer/sharer.php?u=' . $permalink;
+	$twitter = sprintf('https://twitter.com/login?lang=en-gb');
+	$linkedin = sprintf('https://www.linkedin.com/');
+
+	// Wrap the buttons
+	$output = '<ul class="text-center social-icons">';
+		// Add the links inside the wrapper
+		$output .= '<li><a class="facebook" href="' . $facebook . '" target="_blank" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>';
+
+		$output .= '<li><a class="twitter" href="' . $twitter . '" target="_blank" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>';
+
+		$output .= '<li><a class="linkedin" href="' . $linkedin . '" target="_blank" rel="nofollow"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>';
+	$output .= '</ul>';
+
+	return $output;
+}
+/*
+	===============================
+		SOCIAL SHARE BUTTONS END
+	===============================
+*/
+
+/*
+	===============================
+		YEAR START
+	===============================
+*/
+
+	function year(){
+		date_default_timezone_set('Europe/London'); 
+		$this_year = date('Y');
+
+		return $this_year;
+	}
+/*
+	===============================
+		YEAR END
+	===============================
+*/

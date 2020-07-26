@@ -1,5 +1,5 @@
-
 <div class="col-md-4 team">
+	
 	<?php 
 		the_title('<h5>','</h5>'); 
 		the_excerpt('<p>','</p>'); 
@@ -9,6 +9,12 @@
 		endif;
 	?>
 
-	<div class="team-img" style="background-image: url(<?php echo $urlImg; ?>);"></div><!-- .image-st -->
-	<?php the_content('<p>','</p>'); ?>
+	<?php if(has_post_thumbnail() ): ?>
+		<div class="team-img" style="background-image: url(<?php echo $urlImg; ?>);"></div><!-- .team-img -->
+
+		<?php the_content(); ?>
+	<?php else: 
+		the_content();
+	endif; ?>
+
 </div><!-- .team -->

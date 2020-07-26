@@ -1,4 +1,3 @@
-
 	<div class="card">
 		<img class="card-img-top" src="" alt="">
 		<div class="card-body">

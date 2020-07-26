@@ -83,9 +83,11 @@
 					if( $blogLoop->have_posts() ):
 
 						while( $blogLoop->have_posts() ): $blogLoop->the_post();
-
-							get_template_part( 'template-parts/content', 'additionalservices' );
-
+				?>
+							<div class="col-md-6">
+								<?php the_content(); ?>
+							</div><!-- .col-md-6 -->
+				<?php
 						endwhile;
 
 					endif;

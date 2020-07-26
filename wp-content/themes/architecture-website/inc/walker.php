@@ -35,9 +35,7 @@ Walker class gives the ability to access all the elements and customize the mark
 
 class Architecture_Walker_Nav_primary extends Walker_Nav_menu {
 
-	// function start_lvl( &$output, $depth ){//handle ul.
-	function start_lvl(&$output, $depth = 0, $args = array()){//handle ul. //changed variables instead of &$output, $depth, beacause of an error
-
+	function start_lvl( &$output, $depth = 0, $args = array() ){//handle ul.
 		//placed value of &$output with ampersend, because we dont whant to rewrite the complete information what WordPress generates. If there will not be &before $output the variable will be EMPTY.
 		//First Variable - output, Second Variable - depth, Third Variable - arguments.
 

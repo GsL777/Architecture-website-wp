@@ -20,10 +20,22 @@
 
 					if( $blogLoop->have_posts() ):
 
+						$i = 0;
+
 						while( $blogLoop->have_posts() ): $blogLoop->the_post();
 
-							get_template_part( 'template-parts/content', 'contact' );//template-part - folder where are all the content files. get-template-part function will search a folder template-parts and files with start content- .
-							//get_post_format() - retrieve the_post_format of the current post that is in the post loop.
+							if($i == 0): $icon = 'fa fa-home';
+								elseif($i > 0 && $i < 2): $icon = 'fa fa-envelope';
+								elseif($i > 1 && $i < 3): $icon = 'fa fa-phone';
+							endif;
+				?>
+							<div class="text-center col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<i class="text-center <?php echo $icon; ?>"></i>
+								<?php the_title('<p><b>','</b></p>'); ?>
+								<?php the_content('<p>','</p>'); ?>
+							</div><!-- .col-md-4 -->
+				<?php
+						$i++;
 
 						endwhile;
 
@@ -52,10 +64,13 @@
 
 						if( $lastBlog->have_posts() ):
 							while( $lastBlog->have_posts() ): $lastBlog->the_post();
-
-								get_template_part('template-parts/content', 'page');
-
+					?>
+								<div class="entry-content">
+									<?php the_content(); ?>
+								</div><!-- .entry-content -->
+					<?php
 							endwhile;
+
 						endif;
 
 						wp_reset_postdata();
@@ -76,11 +91,12 @@
 								$lastBlog = new WP_Query($args);
 
 								if( $lastBlog->have_posts() ):
-									while( $lastBlog->have_posts() ): $lastBlog->the_post(); 
+									while( $lastBlog->have_posts() ): $lastBlog->the_post();
 
 										the_content();
 
 									endwhile;
+
 								endif;
 
 								wp_reset_postdata();
@@ -89,7 +105,6 @@
 					</div><!-- .col-lg-6 -->
 				</div><!-- .col-md-12 -->
 			</section>
-		
 		</div><!-- #contact -->
 
 
